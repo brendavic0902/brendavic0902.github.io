@@ -4,6 +4,7 @@ h1 {
     font-size: 60px;
     font-weight: bold;
     border: solid 10px rgb(80, 4, 4);
+    text-align: center;
 }
 h2 {
     color: rgb(185, 64, 20);
@@ -19,6 +20,7 @@ p {
 }
 body {
     background-color: white;
+    text-align: center;
 }
 h1 {
     text-align: center;
@@ -47,4 +49,9 @@ p {
 
 img {
     width: 750px;
+    text-align: center;
+}
+
+iframe {
+    text-align: center;
 }
