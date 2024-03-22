@@ -5,6 +5,7 @@ h1 {
     font-weight: bold;
     text-align: center;
     background-color: white;
+
 }
 h2 {
     color: rgb(114, 13, 13);
@@ -19,8 +20,11 @@ p {
     color: rgb(58, 2, 2);
 }
 body {
-    background-color: white;
+    
     text-align: center;
+    background-color: white;
+
+
 }
 h1 {
     text-align: center;
@@ -83,4 +87,24 @@ div {
 
 .paragrafo-especial {
     font-weight: bold;
+    text-align: center;
+    color: #f5f5f5;
+
 }
+
+a:hover{ 
+    text-decoration: underline;
+    color: #f00;
+       
+}
+
+
+header{
+    background-image: url('/img/logo3.webp');
+    
+    background-attachment: fixed;
+
+ 
+}
+
+
