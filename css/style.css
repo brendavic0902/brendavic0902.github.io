@@ -20,7 +20,10 @@ p {
     color: rgb(58, 2, 2);
 }
 body {
-    
+    background-image: url('/img/fundo5.jpg');
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-size: 100% 120%;
     text-align: center;
     background-color: white;
 
