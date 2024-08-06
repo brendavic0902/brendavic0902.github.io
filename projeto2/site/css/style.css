@@ -8,9 +8,20 @@ h1 {
 
 }
 
+h2 {
+    color: rgb(0, 0, 0);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    
+}
+
 p {
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
 
 }
 
@@ -22,7 +33,7 @@ img {
 }
 
 body {
-    background-image: url('/img/https://i.pinimg.com/564x/25/9e/4c/259e4c54cd2124c921eb77942dd50ccc.jpg');
+    background-image: url('https://i.pinimg.com/736x/15/50/35/155035ae8d22f0b9e52def383550969c.jpg');
     background-repeat: no-repeat;
     /* background-position: center; */
     background-size: 100% 120%;
