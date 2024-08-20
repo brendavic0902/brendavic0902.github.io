@@ -1,10 +1,10 @@
 h1 {
-    color: rgb(58, 5, 5);
+    color: rgb(119, 6, 6);
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 60px;
     font-weight: bold;
     text-align: center;
-    background-color: white;
+ 
 
 }
 
@@ -58,5 +58,9 @@ a:hover{
     text-decoration: underline;
     color: rgb(177, 29, 29); 
     background-color: rgb(54, 0, 0);   
-    border-radius: 20;
+    border-radius: 40%;
+}
+
+div centralizador {
+    text-align: center;
 }
