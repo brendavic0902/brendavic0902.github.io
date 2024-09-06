@@ -30,7 +30,7 @@ p {
 }
 
 p2 {
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 30px;
 }
 
@@ -42,7 +42,6 @@ img {
 }
 
 body {
-    background-image: url('https://i.pinimg.com/564x/09/49/92/0949927375e70cf01404c9f5b64ea267.jpg');
     background-repeat: no-repeat;
     /* background-position: center; */
     background-size: 100% 120%;

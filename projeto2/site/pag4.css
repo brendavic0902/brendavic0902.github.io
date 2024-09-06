@@ -1,0 +1,96 @@
+:root{
+    --cor-principal: #000000;
+    --cor-secundaria: #610202;
+    --cor-secundaria-variante: #000000;
+
+}
+
+main{
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+section{
+
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font-size: 60px;
+}
+
+main h1{
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    background-color: aliceblue;
+    border-radius: 10px;
+    margin: 7px;
+    border: solid black 4px;
+}
+
+.classes-boas{
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    flex-wrap: wrap;
+    margin: 30px;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+}
+
+
+
+
+.classe-div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 407px;
+    height: 236px;
+    border: black 4px solid;
+    border-radius: 8px;
+    margin: 2px;
+    background-color: var(--cor-secundaria);
+
+
+}
+
+
+
+.classe-div img{
+    width: 30%;
+    border-radius: 20px;
+    min-width: 140px;
+    margin: 3px;
+
+
+}
+
+div.classe-div {
+    background-color: rgb(90, 35, 35);
+}
+
+.classe-div p{
+    font-size: 20px;
+    color: white;
+
+}
+
+
+.classe-div h2{
+    font-size: 40px;
+    color: white;
+    
+
+
+}
+
+img {
+    width: 75px;
+    height: 95px;
+    text-align: center;
+}
