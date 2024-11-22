@@ -3,7 +3,7 @@ import {useState} from "react"
 
 export default function State() {
     const [msg, setMsg] = useState('');
-    const [mostarDiv, setMostrarDiv] = useState(true)
+    const [mostrarDiv, setMostrarDiv] = useState(true)
     //const alterarMsg = () => {
         //msg='Bom dia'
         //console.log(msg)
@@ -18,7 +18,7 @@ export default function State() {
             <p>Sua mensagem: {msg}</p>
             <input type="text" onChange={manipularInput} />
 
-            <button onClick={()=>SetmostarDiv(!MostrarDiv)}>{MostrarDiv? 'Esconder': 'Mostar'}Clique</button>
+            <button onClick={()=>setMostrarDiv(!mostrarDiv)}>{mostrarDiv? 'Esconder': 'Mostar'}Clique</button>
         {true && (
             <div>
                 <p>paragrafo dinamico!</p>
