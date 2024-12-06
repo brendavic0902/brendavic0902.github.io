@@ -17,6 +17,12 @@ return(
                 <li>
                     <Link href="/Quadra">Qudra</Link>
                 </li>
+                <li>
+                    <Link href="/lista">Lista</Link>
+                </li>
+                <li>
+                    <Link href="/props">Props</Link>
+                </li>
                 </ul>
             </nav>
         </header>
