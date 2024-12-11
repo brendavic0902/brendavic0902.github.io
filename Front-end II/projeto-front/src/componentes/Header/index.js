@@ -1,30 +1,49 @@
-import Link from "next/link";
+'use client';
+
+import Link from "next/link"
+import React, { useState } from 'react';
 import styles from "./Header.module.css";
+import Image from "next/image";
 
+const Header = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    const toggleMenu = () => {
 
-export default function Header(){
-return(
-        <header>
-            <nav>
-                <ul className={styles.lista}>
-                    <li className={styles.home}>
-                        <Link href= '/'>Home</Link>
-                </li>
-                <li>
-                    <Link href="/Sobre">Sobre</Link>
-                </li>
-                <li>
-                    <Link href="/Quadra">Qudra</Link>
-                </li>
-                <li>
-                    <Link href="/lista">Lista</Link>
-                </li>
-                <li>
-                    <Link href="/props">Props</Link>
-                </li>
-                </ul>
-            </nav>
+        setIsMenuOpen(!isMenuOpen);
+    };
+
+    return (
+        <header className={styles.header}>
+
+            <div className={styles.logo}>
+                <Image className={styles.img} src='/images/abel.jpg' alt=" logo " width={50} height={150} />
+                
+            </div>
+
+            {isMenuOpen &&
+                <nav className={`${styles.nav} ${isMenuOpen ? styles.open : ''}`}>
+                    <ul className={styles.lista}>
+                        <li>
+                            <Link className={styles.link} href='/'>Home</Link>
+                        </li>
+
+                        <li>
+                            <Link className={styles.link} href="/sobre">Sobre</Link>
+                        </li>
+
+                        <li>
+                            <Link className={styles.link} href="/discografia">Disco</Link>
+                        </li>
+                    </ul>
+                </nav>
+            }
+            <button className={styles.menuButton} onClick={toggleMenu}>
+                {isMenuOpen ? 'Fechar' : 'Menu'}
+            </button>
         </header>
-    )
-}
+    );
+};
+
+
+

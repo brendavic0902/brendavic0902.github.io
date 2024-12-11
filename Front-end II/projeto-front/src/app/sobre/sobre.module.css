@@ -1,0 +1,23 @@
+
+.img_sobre{
+    border-radius: 40px;
+    display: block;
+    margin: auto;
+    padding: 1%;
+    margin-bottom: 15px;
+  }
+
+
+.para {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+ 
