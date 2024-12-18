@@ -1,7 +1,7 @@
 'use client';
 
 import Link from "next/link"
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import styles from "./Header.module.css";
 import Image from "next/image";
 
