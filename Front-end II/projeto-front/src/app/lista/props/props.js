@@ -1,4 +1,4 @@
-// import Card from "@/componentes/card"
+
 export default function  Props() {
     // const carros = [
     //         {

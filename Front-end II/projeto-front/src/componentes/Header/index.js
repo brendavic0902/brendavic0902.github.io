@@ -1,9 +1,9 @@
 'use client';
 
-import Link from "next/link"
-import React, { useState } from "react";
-import styles from "./Header.module.css";
-import Image from "next/image";
+import { useState, UseEffect } from 'react';
+import Link from 'next/link';
+import styles from './Header.module.css';
+import Image from 'next/image';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);

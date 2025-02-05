@@ -1,12 +1,10 @@
 'use client'
-import {useState} from "react"
+import {useState} from "react";
 
 export default function State() {
     const [msg, setMsg] = useState('');
     const [mostrarDiv, setMostrarDiv] = useState(true)
-    //const alterarMsg = () => {
-        //msg='Bom dia'
-        //console.log(msg)
+    
     
 
     const manipularInput = (evento) => {
