@@ -1,47 +1,102 @@
 'use client';
-
-import { useState, UseEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import styles from './Header.module.css';
 import Image from 'next/image';
 
-const Header = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+export default function Header() {
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
 
-    const toggleMenu = () => {
+    const openMenu = () => setMenuOpen(true);
+    const closeMenu = () => setMenuOpen(false);
 
-        setIsMenuOpen(!isMenuOpen);
-    };
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 600);
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     return (
-        <header className={styles.header}>
-
+        <header className={`${styles.header} ${menuOpen ? styles.menuOpen : ''}`}>
             <div className={styles.logo}>
-                <Image className={styles.img} src='/images/abel.jpg' alt=" logo " width={50} height={150} />
+
+                {<Image className={styles.img} src='/image/logo2.png' alt="Imagem Logo sanrio" width={100} height={50}/>}
                 
             </div>
 
-            {isMenuOpen &&
-                <nav className={`${styles.nav} ${isMenuOpen ? styles.open : ''}`}>
-                    <ul className={styles.lista}>
-                       <li>
-                            <Link className={styles.link} href="/home">Home</Link>
+            <div 
+            className={styles.menuIcon} 
+              onClick={menuOpen ? closeMenu : openMenu}>
+                  {menuOpen ? '✖' : '☰'}
+            </div>
+
+            <ul className={`${styles.lista} ${menuOpen ? styles.open : ''}`}>
+                <li>
+                    <Link href="/" className={`${styles.Link}`}>Home</Link>
+                    
+                </li>
+                <li className={styles.itemMenu}>
+                    <Link href=""className={`${styles.Link}`}>Médicos</Link>
+                    <ul className={styles.submenu}>
+                        <li className={styles.lista_submenu}>
+                            <a href="/lista">Listar</a>
                         </li>
-                        <li>
-                            <Link className={styles.link} href="/medicos">Médicos</Link>
+                        <li  className={styles.lista_submenu}>
+                            <a href="#">Adicionar</a>
                         </li>
-                        <li>
-                            <Link className={styles.link} href="/pacientes">Pacientes</Link>
+                        <li  className={styles.lista_submenu}>
+                            <a href="#">Editar</a>
                         </li>
-                        <li>
-                            <Link className={styles.link} href="/agendamento">Agendamento</Link>
+                        <li  className={styles.lista_submenu}>
+                            <a href="#">Excluir</a>
                         </li>
                     </ul>
-                </nav>
-            }
-            <button className={styles.menuButton} onClick={toggleMenu}>
-                {isMenuOpen ? 'Fechar' : 'Menu'}
-            </button>
+                    
+                </li>
+                <li className={styles.itemMenu}>
+                    <Link href="/lista"className={`${styles.Link}`}>Pacientes</Link>
+                    <ul className={styles.submenu}>
+                        <li className={styles.lista_submenu}>
+                            <a href="/Pacientes">Listar</a>
+                        </li>
+                        <li  className={styles.lista_submenu}>
+                            <a href="#">Adicionar</a>
+                        </li>
+                        <li  className={styles.lista_submenu}>
+                            <a href="#">Editar</a>
+                        </li>
+                        <li  className={styles.lista_submenu}>
+                            <a href="#">Excluir</a>
+                        </li>
+                    </ul>
+                    
+                </li>
+                <li className={styles.itemMenu}>
+                    <Link href="/lista"className={`${styles.Link}`}>Agendamento</Link>
+                    <ul className={styles.submenu}>
+                        <li className={styles.lista_submenu}>
+                            <a href="/Pacientes">Listar Consultas</a>
+                        </li>
+                        <li  className={styles.lista_submenu}>
+                            <a href="#">Agendar Consulta</a>
+                        </li>
+                        <li  className={styles.lista_submenu}>
+                            <a href="#">Editar Agendamento</a>
+                        </li>
+                        <li  className={styles.lista_submenu}>
+                            <a href="#">Cancelar</a>
+                        </li>
+                    </ul>
+                    
+                </li>
+
+            </ul>
         </header>
     );
-};
+}

@@ -1,3 +1,10 @@
+
+header {
+  position:fixed;
+  top:0;
+  z-index:999;
+}
+
 .lista {
     list-style-type: none;
     margin: 0;
