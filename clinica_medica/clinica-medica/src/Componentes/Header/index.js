@@ -60,10 +60,10 @@ export default function Header() {
                     
                 </li>
                 <li className={styles.itemMenu}>
-                    <Link href="/lista"className={`${styles.Link}`}>Pacientes</Link>
+                    <Link href=""className={`${styles.Link}`}>Pacientes</Link>
                     <ul className={styles.submenu}>
                         <li className={styles.lista_submenu}>
-                            <a href="/Pacientes">Listar</a>
+                            <a href="/listar">Listar</a>
                         </li>
                         <li  className={styles.lista_submenu}>
                             <a href="#">Adicionar</a>
